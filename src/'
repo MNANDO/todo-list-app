@@ -23,7 +23,7 @@ function App() {
 
 
     const removeTodo = (todo) => {
-        setTodos((prevTodos) => prevTodos.filter(prevTodo => prevTodo.id !== todo.id));
+        setTodos((prevTodos) => prevTodos.filter());
     }
 
     const setInput = e => setTodo(e.target.value);
@@ -41,7 +41,7 @@ function App() {
                 {todos.map((todo) => (
                     <li key={todo.id}> 
                         {todo.todo}
-                        <button onClick={() => removeTodo(todo)}>&times;</button>
+                        <button>&times;</button>
                     </li>
                 ))}
             </ul> 
